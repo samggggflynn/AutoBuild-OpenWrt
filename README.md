@@ -28,3 +28,11 @@ You could edit and enable "Sync Code" YAML file to let your forked repo keep upd
 **3. Sync Code**
   - Uncomment 'push-branches-master' 3 lines under **`On`** section and commit changes to let the script sync the code once for you.
   - Uncomment 'schedule-cron' 2 lines under **`On`** section and commit changes to let the script sync the code everyday on 3 am[UTC +8]
+
+## 中文简要说明（不是esir原文档翻译，仅针对本人编译GL-iNet MT300_v1进行补充和说明）
+
+
+**1. 新增MT300_v1自动编译，默认commit触发ACTION**
+
+ - 增加SSRP支持，由于未扩容或加载U盘进行overlap映射的FLASH容量仅有16M，因此编译结果中bin文件大小不超过16M。如果可选配置编译后固件大小超过16M，请修改`.config`，否则编译不会输出`openwrt-ramips-mt7620-glinet_gl-mt300n-squashfs-sysupgrade.bin`固件。
+
